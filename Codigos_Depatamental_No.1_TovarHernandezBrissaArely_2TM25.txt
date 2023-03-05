@@ -1,0 +1,211 @@
+TOVAR HERNANDEZ BRISSA ARELY / GRUPO:2TM25 7  / Total de codigos: 7
+
+
+1) CODIGO: Hola...
+
+#include<iostream>
+
+int main( ){
+	
+	std::cout<<"Hola...";
+	
+return 0;	
+}
+
+
+
+
+
+2) CODIGO: De Grados a Rad
+
+#include <iostream>
+#define PI 3.1416
+
+using namespace std; 
+int main (){ 
+cout<<"Autora: Brissa Arely Tovar Hernandez Grupo: 2TM25"<<endl; 
+
+float gra=0;
+float red=0;
+red=(gra*PI)/180;
+cout<<red<<endl;
+
+return 0;
+} 
+
+
+
+
+
+3)CODIGO: De Rad a Grados
+
+#include <iostream>
+#define PI 3.1416
+
+using namespace std; 
+int main (){ 
+cout<<"Autora: Brissa Arely Tovar Hernandez Grupo: 2TM25"<<endl; 
+
+float gra=0;
+float red=0;
+gra=(red*180)/PI;
+cout<<gra<<endl;
+
+return 0;
+} 
+
+
+
+
+
+
+4) CODIGO: General de Grados y Rad
+
+#include <iostream>
+#include <cmath>
+#define PI 3.1416
+float gra=0,rad=0,ent=0;
+using namespace std;
+int main( )
+
+{
+ std::cout<<"para transformar grados a radianes pulsa 1,para transformar de radianes a grados pulsa 2: ";
+cin>>ent;
+if (ent==1)
+ { 
+ std::cout<<"ingresa los radianes: ";
+ cin>>rad;
+ gra=(rad*180)/(PI);
+ std::cout<<"los grados son: "<<gra;
+ }
+ else {
+		std::cout<<"ingresa los grados: ";
+		cin>>gra;
+		rad=(gra*PI)/180;
+ std::cout<<"los radianes son: "<<rad;
+		
+ }
+ return 0;
+ }
+
+
+
+
+
+5) CODIGO:lcv.h
+
+#include<iostream>
+#include<cmath>
+#define PI 3.141592
+#define E 2.7182818
+using namespace std;
+
+int gradarad(float gra){
+	float rad=0;
+	rad=(gra*PI)/180;
+	cout<<rad;
+	return 0;
+}
+
+int radagrad(float rad){
+	float grad=0;
+	grad=(rad*180)/PI;
+	cout<<grad;
+return 0;
+}
+
+int distp1p2(float x1=0, float y1=0, float z1=0, float x2=0, float y2=0, float z2=0){
+float p1p2=sqrt(((x2-x1)*(x2-x1))+((y2-y1)*(y2-y1))+((z2-z1)*(z2-z1)));
+	cout<<p1p2;
+return 0;	
+}
+
+int rectapol(float x=0, float y=0){
+	float r=0;
+	float teta=0;
+	r=sqrt((x*x)+(y*y));
+	teta=atan(y/x);
+	cout<<"(<<r<<","<<teta<<)";
+return 0;
+}
+
+int espacial(float r, float teta, float phy){
+	float x=0;
+	float y=0;
+	float z=0;
+	x=r*sin(phy)*cos(teta);
+	cout<<x<<","<<y<<","<<z<<endl;
+	}
+
+
+
+
+
+6) CODIGO:Main.cpp
+
+#include<iostream>
+#include<cmath>
+#include"lcv.h"
+using namespace std;
+int main(){
+	distp1p2(5,5,5,6,-7,7);
+	rectapol (6,7);
+	return 0;
+}
+
+
+
+
+
+7) CODIGO:Polares y Rectangulares
+
+#include <cmath>
+#include <iostream>
+#include <stdio.h>
+float x=0,y=0,r=0;
+float teta=0,a=0;
+float X=0,Y=0,R=0;
+float TETA=0;
+#define PI 3.1416
+using namespace std;
+int main(int argc, char *argv[])
+
+{
+	std::cout<<"si quieres convertir coordenadas rectangulares a polares presiona 1 y si quieres convertir polares a rectangulares presiona 2: ";
+	std::cin>>a;
+	if(a==1)
+	{
+	std::cout<< "coordenadas rectangulares a polares: "<<endl;
+	std::cout << "introduce x: ";
+	std::cin>>x;
+	std::cout<<"introduce y: ";
+	std::cin>>y;
+	std::cout<<"r es igual a: ";
+	r=sqrt( (x*x)+(y*y));
+    std::cout<<r<<endl;
+    cout<<"Teta es igual a: ";
+    teta=atan((y/x));
+    cout<<teta;
+	} 
+	else{
+    cout<<"coordenadas polares a rectangulares "<<endl;
+    cout << "introduce r: ";
+    cin>>R;
+    cout << "introduce teta: ";
+    cin>>TETA;
+    cout << "x es igual a: ";
+    X=R*cos(TETA);
+    cout<<X<<endl;
+    cout << "y es igual a: ";
+    Y=R*sin(TETA);
+    cout<<Y;
+	}
+	return 0;
+	
+}
+
+
+
+
+
+
